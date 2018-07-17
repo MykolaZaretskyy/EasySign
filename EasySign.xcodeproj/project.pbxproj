@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		376CBB7A20FD383E00B73A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CBB7920FD383E00B73A67 /* AppDelegate.swift */; };
-		376CBB7C20FD383E00B73A67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CBB7B20FD383E00B73A67 /* MainViewController.swift */; };
+		376CBB7C20FD383E00B73A67 /* CreateSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CBB7B20FD383E00B73A67 /* CreateSignViewController.swift */; };
 		376CBB7F20FD383E00B73A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376CBB7D20FD383E00B73A67 /* Main.storyboard */; };
 		376CBB8120FD384000B73A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376CBB8020FD384000B73A67 /* Assets.xcassets */; };
 		376CBB8420FD384000B73A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376CBB8220FD384000B73A67 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		376CBB7620FD383E00B73A67 /* EasySign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376CBB7920FD383E00B73A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		376CBB7B20FD383E00B73A67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		376CBB7B20FD383E00B73A67 /* CreateSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSignViewController.swift; sourceTree = "<group>"; };
 		376CBB7E20FD383E00B73A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		376CBB8020FD384000B73A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376CBB8320FD384000B73A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				376CBB7920FD383E00B73A67 /* AppDelegate.swift */,
-				376CBB7B20FD383E00B73A67 /* MainViewController.swift */,
+				376CBB7B20FD383E00B73A67 /* CreateSignViewController.swift */,
 				376CBB7D20FD383E00B73A67 /* Main.storyboard */,
 				376CBB8020FD384000B73A67 /* Assets.xcassets */,
 				376CBB8220FD384000B73A67 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				376CBB7C20FD383E00B73A67 /* MainViewController.swift in Sources */,
+				376CBB7C20FD383E00B73A67 /* CreateSignViewController.swift in Sources */,
 				376CBB7A20FD383E00B73A67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

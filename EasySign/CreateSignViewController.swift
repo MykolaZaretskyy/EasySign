@@ -8,18 +8,19 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-    @IBOutlet weak var canvasImageView: UIImageView!
+class CreateSignViewController: UIViewController {
+    @IBOutlet weak var tempImageView: UIImageView!
+    @IBOutlet weak var mainImageView: UIImageView!
     
     var lastPoint = CGPoint.zero
-    var red: CGFloat = 40.0
-    var green: CGFloat = 255.0
-    var blue: CGFloat = 22.0
+    var red: CGFloat = 255.0
+    var green: CGFloat = 250.0
+    var blue: CGFloat = 34.0
+    var opacity: CGFloat = 1.0
     var swiped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        canvasImageView.backgroundColor = UIColor.blue
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,7 +34,7 @@ class MainViewController: UIViewController {
         // 6
         swiped = true
         if let touch = touches.first {
-            let currentPoint = touch.location(in: view)
+            let currentPoint = touch.location(in: self.view)
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
             
             // 7
@@ -46,22 +47,22 @@ class MainViewController: UIViewController {
             // draw a single point
             drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
         }
+
+        // Merge tempImageView into mainImageView
+        UIGraphicsBeginImageContext(mainImageView.frame.size)
+        mainImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: 1.0)
+        tempImageView.image?.draw(in :CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: opacity)
+        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        tempImageView.image = nil
     }
-//
-//        // Merge tempImageView into mainImageView
-//        UIGraphicsBeginImageContext(mainImageView.frame.size)
-//        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: kCGBlendModeNormal, alpha: 1.0)
-//        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: kCGBlendModeNormal, alpha: opacity)
-//        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        tempImageView.image = nil
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         // 1
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        canvasImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         // 2
         context?.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
@@ -70,15 +71,14 @@ class MainViewController: UIViewController {
         // 3
         context?.setLineCap(CGLineCap.round)
         context?.setLineWidth(CGFloat(5))
-//        context?.setStrokeColor(UIColor.red.cgColor)
-        context?.setStrokeColor(red: red, green: green, blue: blue, alpha: CGFloat(1))
+        context?.setStrokeColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
         context?.setBlendMode(CGBlendMode.normal)
         
         // 4
         context?.strokePath()
         
         // 5
-        canvasImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
 }
