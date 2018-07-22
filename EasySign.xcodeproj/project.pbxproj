@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374E487C210507C100DF14D1 /* FilesManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E487B210507C100DF14D1 /* FilesManagerService.swift */; };
+		374E488021050DF700DF14D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E487F21050DF700DF14D1 /* Constants.swift */; };
 		376CBB7A20FD383E00B73A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CBB7920FD383E00B73A67 /* AppDelegate.swift */; };
 		376CBB7C20FD383E00B73A67 /* CreateSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CBB7B20FD383E00B73A67 /* CreateSignViewController.swift */; };
 		376CBB7F20FD383E00B73A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376CBB7D20FD383E00B73A67 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374E487B210507C100DF14D1 /* FilesManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManagerService.swift; sourceTree = "<group>"; };
+		374E487F21050DF700DF14D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		376CBB7620FD383E00B73A67 /* EasySign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376CBB7920FD383E00B73A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376CBB7B20FD383E00B73A67 /* CreateSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSignViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374E487A2105076D00DF14D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				374E487B210507C100DF14D1 /* FilesManagerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		376CBB6D20FD383E00B73A67 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +66,11 @@
 		376CBB7820FD383E00B73A67 /* EasySign */ = {
 			isa = PBXGroup;
 			children = (
+				374E487A2105076D00DF14D1 /* Services */,
 				376CBB8D20FE8E5300B73A67 /* Resources */,
 				376CBB8B20FE8E1D00B73A67 /* Views */,
 				376CBB7D20FD383E00B73A67 /* Main.storyboard */,
+				374E487F21050DF700DF14D1 /* Constants.swift */,
 				376CBB7920FD383E00B73A67 /* AppDelegate.swift */,
 				376CBB8520FD384000B73A67 /* Info.plist */,
 			);
@@ -160,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				376CBB7C20FD383E00B73A67 /* CreateSignViewController.swift in Sources */,
+				374E487C210507C100DF14D1 /* FilesManagerService.swift in Sources */,
 				376CBB7A20FD383E00B73A67 /* AppDelegate.swift in Sources */,
+				374E488021050DF700DF14D1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
